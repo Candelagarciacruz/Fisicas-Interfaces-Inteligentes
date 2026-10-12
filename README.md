@@ -37,8 +37,13 @@ Esta situación es similar a la anterior, pero la esfera tiene cien veces más m
 <img width="922" height="576" alt="Situacion6 (1)" src="https://github.com/user-attachments/assets/105c6e08-bd5c-436b-a201-e9f7c7d2aa87" />
 
 ### Situación 7
-Los tres objetos son físicos y la esfera tiene fricción ya que a se le ha asignado un `Physics Material` a su componente Collider. Esta propiedad influye en el rozamiento durante el contacto con otras superficies, reduciendo el deslizamiento según el material físico y sus parámetros de fricción (se han mantenido los iniciales): <img width="221" height="116" alt="image" src="https://github.com/user-attachments/assets/84109053-467e-4dc8-b545-e1176c523b08" />
+Los tres objetos son físicos y la esfera tiene fricción ya que a se le ha asignado un `Physics Material` a su componente Collider. Esta propiedad influye en el rozamiento durante el contacto con otras superficies, reduciendo el deslizamiento según el material físico y sus parámetros de fricción (se han mantenido los iniciales).
+<img width="221" height="116" alt="image" src="https://github.com/user-attachments/assets/84109053-467e-4dc8-b545-e1176c523b08" />
+- Con plano físico:
 <img width="938" height="546" alt="Situacion7" src="https://github.com/user-attachments/assets/02eeb5e0-a9f7-43a2-a964-80ebe70f2fb3" />
+
+-Con plano cinemático:
+<img width="960" height="564" alt="Situacion7 1" src="https://github.com/user-attachments/assets/730562f3-4931-484e-b1e7-b815168a0458" />
 
 ### Situación 8
 
