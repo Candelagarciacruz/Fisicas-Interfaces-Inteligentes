@@ -34,15 +34,25 @@ Aquí se puede observar como ahora la colisión tiene mayor efecto en el cubo qu
 
 ### Situación 6
 Esta situación es similar a la anterior, pero la esfera tiene cien veces más masa que el cubo (masa esfera = 100 y masa cubo = 1). La diferencia de masa es mayor, por lo que la esfera suele experimentar un cambio de movimiento menor y el cubo resulta más afectado por el impacto:
-<img width="870" height="570" alt="Situacion6" src="https://github.com/user-attachments/assets/c69be9aa-4a34-4c7d-93d1-e81dfe3f87bf" />
+<img width="922" height="576" alt="Situacion6 (1)" src="https://github.com/user-attachments/assets/105c6e08-bd5c-436b-a201-e9f7c7d2aa87" />
 
 ### Situación 7
-Los tres objetos son físicos y la esfera tiene fricción. Esta propiedad influye en el rozamiento durante el contacto con otras superficies, reduciendo el deslizamiento según el material físico y sus parámetros de fricción.
+Los tres objetos son físicos y la esfera tiene fricción ya que a se le ha asignado un `Physics Material` a su componente Collider. Esta propiedad influye en el rozamiento durante el contacto con otras superficies, reduciendo el deslizamiento según el material físico y sus parámetros de fricción (se han mantenido los iniciales): <img width="221" height="116" alt="image" src="https://github.com/user-attachments/assets/84109053-467e-4dc8-b545-e1176c523b08" />
+<img width="938" height="546" alt="Situacion7" src="https://github.com/user-attachments/assets/02eeb5e0-a9f7-43a2-a964-80ebe70f2fb3" />
 
 ### Situación 8
-El plano es cinemático, el cubo es físico y la esfera tiene activada la opción `Is Trigger`. La esfera detecta el paso o contacto de otros objetos, pero no actúa como una superficie sólida: el cubo puede atravesarla sin recibir una respuesta física de colisión.
+
+El plano es cinemático, el cubo es físico y la esfera no es física y tiene activada la opción `Is Trigger` en su `Collider`. La esfera detecta el paso o contacto de otros objetos, pero no actúa como una superficie sólida: el cubo puede atravesarla sin recibir una respuesta física de colisión como se muestra al ejecutar la situación:
+<img width="918" height="572" alt="Situacion8" src="https://github.com/user-attachments/assets/be7be939-0b59-498b-9342-d6303c4fdba8" />
+
+Situación 9
 
 ### Situación 9
-El plano es cinemático y tanto el cubo como la esfera tienen `Rigidbody`, pero la esfera tiene activada la opción `Is Trigger`. A diferencia de la situación anterior, la esfera también participa en la simulación física, aunque el trigger sigue permitiendo detectar contactos sin generar una respuesta física de colisión.
+Esta situación es como la anterior pero ahora la esfera sí es física (además de tener activada la opción `Is Trigger`). A diferencia de la situación anterior, la esfera también participa en la simulación física, aunque el trigger sigue permitiendo detectar contactos sin generar una respuesta física de colisión por lo que puede atravesarlos:
+- Con la esfera siendo el objeto a mayor altura:
+<img width="912" height="534" alt="Situacion9" src="https://github.com/user-attachments/assets/7bbac95c-092b-42fe-be4f-c5778fa951ef" />
+
+- Con el cubo a mayor altura:
+<img width="828" height="560" alt="Situacion9 1" src="https://github.com/user-attachments/assets/2e68a4bc-4082-4dff-aced-cc88f74682ad" />
 
 ## Movimiento - Físicas
