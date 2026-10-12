@@ -46,11 +46,8 @@ Los tres objetos son físicos y la esfera tiene fricción ya que a se le ha asig
 <img width="960" height="564" alt="Situacion7 1" src="https://github.com/user-attachments/assets/730562f3-4931-484e-b1e7-b815168a0458" />
 
 ### Situación 8
-
 El plano es cinemático, el cubo es físico y la esfera no es física y tiene activada la opción `Is Trigger` en su `Collider`. La esfera detecta el paso o contacto de otros objetos, pero no actúa como una superficie sólida: el cubo puede atravesarla sin recibir una respuesta física de colisión como se muestra al ejecutar la situación:
 <img width="918" height="572" alt="Situacion8" src="https://github.com/user-attachments/assets/be7be939-0b59-498b-9342-d6303c4fdba8" />
-
-Situación 9
 
 ### Situación 9
 Esta situación es como la anterior pero ahora la esfera sí es física (además de tener activada la opción `Is Trigger`). A diferencia de la situación anterior, la esfera también participa en la simulación física, aunque el trigger sigue permitiendo detectar contactos sin generar una respuesta física de colisión por lo que puede atravesarlos:
@@ -61,3 +58,17 @@ Esta situación es como la anterior pero ahora la esfera sí es física (además
 <img width="828" height="560" alt="Situacion9 1" src="https://github.com/user-attachments/assets/2e68a4bc-4082-4dff-aced-cc88f74682ad" />
 
 ## Movimiento - Físicas
+
+## Ejercicio 1
+Se ha creado una cápsula como personaje y se le han añadido los componentes `Rigidbody` y `Capsule Collider` para controlar su movimiento. El movimiento se define en el script asociado a la cápsula *"movementCapsule.cs"*, se realiza con las teclas WASD o las flechas, obteniendo la entrada mediante `Input.GetAxis()`. Además, se utiliza `Rigidbody.MovePosition()` en `FixedUpdate()` para mover al personaje durante las actualizaciones de física, ajustando el desplazamiento con `Time.fixedDeltaTime`.
+A continuación se observa su ejecución:
+<img width="1626" height="844" alt="Ex1" src="https://github.com/user-attachments/assets/50e934ed-59d1-4c97-ac4a-0b2a476a8d1e" />
+
+## Ejercicio 2
+Se han creado varias (3) esferas con `Rigidbody` dinámico para detectar las colisiones entre los objetos. Mediante `OnCollisionEnter()` se muestra en la consola el nombre del objeto con el que se produce la colisión y se cambia su color utilizando valores RGB aleatorios. De esta forma, se puede observar visualmente cuándo se produce un contacto físico:
+<img width="1892" height="938" alt="Ex2" src="https://github.com/user-attachments/assets/2909f088-ce89-4ec6-8096-1c920d8cbdd2" />
+
+## Ejercicio 3
+Se han creado dos zonas con `Is Trigger` activado para detectar la entrada y salida del personaje sin bloquear su movimiento. La primera cambia su color al entrar y lo restaura al salir mediante `OnTriggerEnter()` y `OnTriggerExit()`. La segunda aumenta la variable `damage` (daño) en 1 punto cada vez que el personaje entra en ella, mostrando el valor acumulado en la consola. Se puede ver aquí su ejecución:
+<img width="1904" height="878" alt="Ex3" src="https://github.com/user-attachments/assets/e83a9734-6a4f-4256-b665-8b354d28c269" />
+
