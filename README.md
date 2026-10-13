@@ -88,6 +88,7 @@ Se han creado tres cubos con `Rigidbody` y distintos `Physic Materials`: resbala
 
 ## Ejercicio 6
 La escena contiene una esfera, un cubo y un cilindro, todos con `Collider` pero sin `Rigidbody`, tal como indica el enunciado. Sin embargo, los `Collider` por sí solos no permiten que los objetos se muevan mediante la simulación física de Unity, ya que no tienen un `Rigidbody` que gestione su movimiento dinámico. Aunque Unity puede detectar colisiones entre colliders estáticos y otros objetos, estos tres objetos no pueden interactuar como cuerpos físicos dinámicos si ninguno tiene `Rigidbody`.
-Por este motivo, no se puede implementar el comportamiento completo mediante colisiones físicas tal como está planteado. 
-
+Por este motivo, no se puede implementar el comportamiento completo mediante colisiones físicas tal como está planteado. Por lo tanto, se ha hecho usando el Transform como solución alternativa.
+<img width="980" height="584" alt="Ex6" src="https://github.com/user-attachments/assets/348f86d7-62c6-47da-a04e-53c55d1f1277" />
+ 
 *Candela García Cruz*
