@@ -65,10 +65,30 @@ A continuación se observa su ejecución:
 <img width="1626" height="844" alt="Ex1" src="https://github.com/user-attachments/assets/50e934ed-59d1-4c97-ac4a-0b2a476a8d1e" />
 
 ## Ejercicio 2
-Se han creado varias (3) esferas con `Rigidbody` dinámico para detectar las colisiones entre los objetos. Mediante `OnCollisionEnter()` se muestra en la consola el nombre del objeto con el que se produce la colisión y se cambia su color utilizando valores RGB aleatorios. De esta forma, se puede observar visualmente cuándo se produce un contacto físico:
+Se han elaborado varias (3) esferas con `Rigidbody` dinámico para detectar las colisiones entre los objetos. Mediante `OnCollisionEnter()` se muestra en la consola el nombre del objeto con el que se produce la colisión y se cambia su color utilizando valores RGB aleatorios. De esta forma, se puede observar visualmente cuándo se produce un contacto físico:
 <img width="1892" height="938" alt="Ex2" src="https://github.com/user-attachments/assets/2909f088-ce89-4ec6-8096-1c920d8cbdd2" />
 
 ## Ejercicio 3
-Se han creado dos zonas con `Is Trigger` activado para detectar la entrada y salida del personaje sin bloquear su movimiento. La primera cambia su color al entrar y lo restaura al salir mediante `OnTriggerEnter()` y `OnTriggerExit()`. La segunda aumenta la variable `damage` (daño) en 1 punto cada vez que el personaje entra en ella, mostrando el valor acumulado en la consola. Se puede ver aquí su ejecución:
+Se han hecho dos zonas con `Is Trigger` activado para detectar la entrada y salida del personaje sin bloquear su movimiento. La primera cambia su color al entrar y lo restaura al salir mediante `OnTriggerEnter()` y `OnTriggerExit()`. La segunda aumenta la variable `damage` (daño) en 1 punto cada vez que el personaje entra en ella, mostrando el valor acumulado en la consola. Se puede ver aquí su ejecución:
 <img width="1904" height="878" alt="Ex3" src="https://github.com/user-attachments/assets/e83a9734-6a4f-4256-b665-8b354d28c269" />
 
+## Ejercicio 4
+Se han creado las capas `Jugador`, `Enemigos` y `Recolectables`, asignándolas a sus respectivos objetos (cubos más altos -> enemigos, otros cubos -> recolectables y cápsula -> jugador). En **Edit -> Project Settings > Physics** se ha configurado la `Layer Collision Matrix` para controlar qué capas pueden interactuar: 
+<img width="238" height="235" alt="image" src="https://github.com/user-attachments/assets/604cea0d-9784-48e0-a8bf-2567803a6028" />
+Los enemigos colisionan con el jugador, mientras que los recolectables utilizan colliders con `Is Trigger` activado para detectar el contacto sin bloquear el movimiento. Al ejecutarlo se puede ver:
+<img width="1902" height="922" alt="Ex4" src="https://github.com/user-attachments/assets/da4ad2e9-04aa-42e2-ba57-7f0bed2f61e5" />
+
+## Ejercicio 5
+Se han creado tres cubos con `Rigidbody` y distintos `Physic Materials`: resbaladizo (el cubo más a la izquierda), rugoso (el cubo más a la derecha) y de rebote alto (el del medio). Al pulsar la tecla X, se aplica una fuerza mediante `AddForce()` con `ForceMode.Impulse`. Se observan las distintas reacciones de los cubos al pulsar la tecla X, con el mismo valor fuerza = 3, según la fricción y el rebote configurados en sus materiales físicos:
+<img width="1906" height="858" alt="Ex5" src="https://github.com/user-attachments/assets/fb8322b7-dbaf-4047-b9c8-afd40f73aec1" />
+
+<img width="221" height="134" alt="image" src="https://github.com/user-attachments/assets/c67f8b64-ce4e-48e2-b0b1-10d5162021a3" />
+![Uploading image.png…]()
+
+<img width="223" height="134" alt="image" src="https://github.com/user-attachments/assets/caaf7791-979a-4115-826b-696f8ba95ac9" />
+
+## Ejercicio 6
+La escena contiene una esfera, un cubo y un cilindro, todos con `Collider` pero sin `Rigidbody`, tal como indica el enunciado. Sin embargo, los `Collider` por sí solos no permiten que los objetos se muevan mediante la simulación física de Unity, ya que no tienen un `Rigidbody` que gestione su movimiento dinámico. Aunque Unity puede detectar colisiones entre colliders estáticos y otros objetos, estos tres objetos no pueden interactuar como cuerpos físicos dinámicos si ninguno tiene `Rigidbody`.
+Por este motivo, no se puede implementar el comportamiento completo mediante colisiones físicas tal como está planteado. 
+
+*Candela García Cruz*
