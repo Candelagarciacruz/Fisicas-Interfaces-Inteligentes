@@ -83,8 +83,7 @@ Se han creado tres cubos con `Rigidbody` y distintos `Physic Materials`: resbala
 <img width="1906" height="858" alt="Ex5" src="https://github.com/user-attachments/assets/fb8322b7-dbaf-4047-b9c8-afd40f73aec1" />
 
 <img width="221" height="134" alt="image" src="https://github.com/user-attachments/assets/c67f8b64-ce4e-48e2-b0b1-10d5162021a3" />
-![Uploading image.png…]()
-
+<img width="222" height="137" alt="Captura de pantalla 2026-10-13 042908" src="https://github.com/user-attachments/assets/ca4bc0d7-0a48-4d3a-84ca-60d08fc3f0df" />
 <img width="223" height="134" alt="image" src="https://github.com/user-attachments/assets/caaf7791-979a-4115-826b-696f8ba95ac9" />
 
 ## Ejercicio 6
